@@ -20,13 +20,13 @@ public class Employee {
 	@Column(name="Email")
 	   private String Email; 
 	@Column(name="SALARY")
-	   private int SALARY;
+	   private double SALARY;
 	public Employee() {
 		super();
 	
 	}
 	
-	public Employee(int id, String firstName, String email, int SALARY) {
+	public Employee(int id, String firstName, String email, double SALARY) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -55,10 +55,10 @@ public class Employee {
 	public void setEmail(String email) {
 		Email = email;
 	}
-	public int getSALARY() {
+	public double getSALARY() {
 		return SALARY;
 	}
-	public void setSALARY(int SALARY) {
+	public void setSALARY(double SALARY) {
 		this.SALARY = SALARY;
 	}
 	@Override

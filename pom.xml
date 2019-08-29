@@ -18,21 +18,24 @@
 	</properties>
 
 	<dependencies>
+	
+	<!-- hibernate Core Dependency 5.4.4 -->
 		<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    </dependency>
+    		<groupId>org.hibernate</groupId>
+   			 <artifactId>hibernate-core</artifactId>
+   		 </dependency>
+   		 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		
+		<!-- Tomcat jasper Dependency  -->
 		<dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-jasper</artifactId>
-    <version>9.0.1</version>
-</dependency>
+   			 <groupId>org.apache.tomcat</groupId>
+  			  <artifactId>tomcat-jasper</artifactId>
+   			 <version>9.0.21</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

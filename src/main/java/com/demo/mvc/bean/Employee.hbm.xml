@@ -15,7 +15,7 @@
         <property name="Email" type="java.lang.String">
             <column name="Email" />
         </property>
-        <property name="SALARY" type="int">
+        <property name="SALARY" type="double">
             <column name="SALARY" />
         </property>
         
