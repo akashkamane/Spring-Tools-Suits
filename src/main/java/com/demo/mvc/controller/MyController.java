@@ -42,10 +42,16 @@ public class MyController {
 			return mv; 
 		}
 	@RequestMapping(value="/add",params="search",method=RequestMethod.GET)
-	public String search() {
+	public ModelAndView search() {
+		ModelAndView mv = new ModelAndView();
 		
-	System.out.println("hello");
-	return "catlog";
+		mv.addObject("Employee", "cart");  
+		 
+		mv.setViewName("catlog");
+		System.out.println("caTLOG");
+			  
+			return mv;
+	
 	}
 	@RequestMapping(value="/search",params="Abovebutton",method=RequestMethod.POST)
 	  public ModelAndView Above(@RequestParam Double SALARY) {	  

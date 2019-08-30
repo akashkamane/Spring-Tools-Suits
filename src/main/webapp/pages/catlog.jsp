@@ -39,14 +39,15 @@
     <th>Email</th> 
     <th>salary</th>
   </tr>
-  <%
+  <%-- <%
 
 if(session.getAttribute("Employee")==null){
 	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 	response.sendRedirect("cart.jsp");
-%>
-<%} %>
-<%
+%> --%>
+<%-- <%} %> --%>
+
+<%-- <%
 Vector v=(Vector) request.getAttribute("Employee");
 Iterator it=v.iterator();
 while(it.hasNext()){
@@ -57,7 +58,7 @@ while(it.hasNext()){
     <td><%= Emp.getEmail()%></td> 
     <td><%= Emp.getSALARY()%></td>
   </tr>
-  <%} %>
+  <%} %> --%>
 </table>
 </body>
 </html>

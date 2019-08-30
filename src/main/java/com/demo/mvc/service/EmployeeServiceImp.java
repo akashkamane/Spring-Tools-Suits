@@ -11,13 +11,13 @@ import com.demo.mvc.bean.dao.employeeDao;
 
 
 @Service
-@Transactional
+//@Transactional
 
 public class EmployeeServiceImp implements employeeService {
 	@Autowired
 	public employeeDao employeeDao;
 		
-	@Transactional
+	//@Transactional
 	 public void addEmployee(Employee employee) {
 	  employeeDao.addEmployee(employee);
 	 }
