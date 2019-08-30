@@ -19,26 +19,29 @@ public class MyController {
 	@Autowired 
 	private employeeService employeeService;
 	
-	@RequestMapping("/")
-	public String m1() {
-		
+	@RequestMapping(value= {"/","Home","Index"})
+	public ModelAndView Index() {
+	ModelAndView mv = new ModelAndView();
+	//mv.addObject("Employee", "cart");  
+	mv.setViewName("cart");
 	System.out.println("hello");
-	return "cart";
+	return mv;
 	}
 	 
 	
-	@RequestMapping(value="/add",params="addEmp",method=RequestMethod.POST)
+	@RequestMapping(value="/add",params="addEmp",method=RequestMethod.GET)
 	public ModelAndView User(Employee employee,HttpSession session) {
 		
 		ModelAndView mv = new ModelAndView();
-		employeeService.addEmployee(employee);
 		
-		mv.addObject(employee);  
+		mv.addObject("Employee", "cart");  
+		employeeService.addEmployee(employee);
+		//mv.addObject("Employee", employeeService.addEmployee(employee));  
 		mv.setViewName("cart");
 				  
 			return mv; 
 		}
-	@RequestMapping(value="/add",params="search",method=RequestMethod.POST)
+	@RequestMapping(value="/add",params="search",method=RequestMethod.GET)
 	public String search() {
 		
 	System.out.println("hello");
@@ -58,8 +61,8 @@ public class MyController {
 	  public ModelAndView Below(@RequestParam Double SALARY) {	  
 	  ModelAndView mv = new ModelAndView();
 	  //Fetch above=new Fetch(); 
-	  employeeService.ltEmployees(SALARY);	  
-	  mv.addObject(SALARY);  
+	   
+	  mv.addObject("salary", "employeeService.ltEmployees(SALARY)"); 
 	  mv.setViewName("catlog");
 			  
 		return mv; }

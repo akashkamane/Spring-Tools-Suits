@@ -8,10 +8,10 @@
 </head>
 <body>
 
-	<form action="add">
-		User Name =<input type="text" name="Name"><br> 
-		User Email =<input type="text" name="Email"><br> 
-		User Salary =<input type="text" name="salary"><br> 
+	<form action="add" >
+		User Name =<input type="text" name="firstName"><br> 
+		User Email =<input type="text" name="email"><br> 
+		User Salary =<input type="text" name="SALARY"><br> 
 		<input type="submit" value="add" name="addEmp"> 
 		<input type="submit" value="search" name="search">
 	</form>
@@ -28,13 +28,13 @@
   </tr>
   <tr>
     <td>${employee.firstName}</td>
-    <td>${employee.Email}</td> 
+    <td>${employee.email}</td> 
     <td>${employee.SALARY}</td>
   </tr>
   
 </table>
 	
-	Welcome ${employee.firstName},${employee.Email},${employee.SALARY}
+	Welcome ${employee.firstName},${employee.email},${employee.SALARY}
 	
 	
 
