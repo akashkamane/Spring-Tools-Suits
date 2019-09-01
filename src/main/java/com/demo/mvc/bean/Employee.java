@@ -6,8 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Table;
-import org.springframework.stereotype.Component;
 
 @Entity
 

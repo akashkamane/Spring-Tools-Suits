@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.mvc.bean.Employee;
+import com.demo.mvc.bean.ManageEmployee;
 import com.demo.mvc.service.employeeService;
 
 
@@ -23,8 +24,11 @@ public class MyController {
 	public ModelAndView Index() {
 	ModelAndView mv = new ModelAndView();
 	//mv.addObject("Employee", "cart");  
-	mv.setViewName("cart");
 	System.out.println("hello");
+	mv.setViewName("cart");
+	
+	//return new ModelAndView("cart");
+	
 	return mv;
 	}
 	 
@@ -33,10 +37,9 @@ public class MyController {
 	public ModelAndView User(Employee employee,HttpSession session) {
 		
 		ModelAndView mv = new ModelAndView();
-		
-		mv.addObject("Employee", "cart");  
-		employeeService.addEmployee(employee);
-		//mv.addObject("Employee", employeeService.addEmployee(employee));  
+		ManageEmployee me=new ManageEmployee();
+		 
+		me.addEmployee(employee);
 		mv.setViewName("cart");
 				  
 			return mv; 

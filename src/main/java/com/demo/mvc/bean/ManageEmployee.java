@@ -69,7 +69,7 @@ public class ManageEmployee {
 			Session session=sessionFactory.openSession();
 			Criteria cr=session.createCriteria(Employee.class);
 			cr.add(Restrictions.lt("SALARY",20000));
-			List employees = cr.list();
+			List<Employee> employees = cr.list();
 			Iterator it=employees.iterator();
 			while(it.hasNext()) {
 				Employee employee=(Employee)it.next();

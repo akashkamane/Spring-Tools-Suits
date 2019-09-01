@@ -19,8 +19,9 @@
 	<br>
 	
 	
+		Welcome ${employee.firstName}
 	
-	<table style="width:50%">
+	<table style="width:50%" border="1">
   <tr>
     <th>Firstname</th>
     <th>Email</th> 
@@ -34,7 +35,6 @@
   
 </table>
 	
-	Welcome ${employee.firstName},${employee.email},${employee.SALARY}
 	
 	
 
