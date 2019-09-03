@@ -11,14 +11,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.mvc.bean.Employee;
 import com.demo.mvc.bean.ManageEmployee;
-import com.demo.mvc.service.employeeService;
+import com.demo.mvc.bean.dao.employeeDao;
 
 
 @RestController
 //
 public class MyController {
 	@Autowired 
-	private employeeService employeeService;
+	private employeeDao empDao;
 	
 	@RequestMapping(value= {"/","Home","Index"})
 	public ModelAndView Index() {
@@ -37,9 +37,10 @@ public class MyController {
 	public ModelAndView User(Employee employee,HttpSession session) {
 		
 		ModelAndView mv = new ModelAndView();
-		ManageEmployee me=new ManageEmployee();
-		 
-		me.addEmployee(employee);
+		//ManageEmployee me=new ManageEmployee();
+		//Integer id=me.
+		empDao.addEmployee(employee);
+		//mv.addObject("Employees", empDao.getEmployee(id));		
 		mv.setViewName("cart");
 				  
 			return mv; 
@@ -51,7 +52,7 @@ public class MyController {
 		mv.addObject("Employee", "cart");  
 		 
 		mv.setViewName("catlog");
-		System.out.println("caTLOG");
+		System.out.println("CATLOG");
 			  
 			return mv;
 	
@@ -60,7 +61,7 @@ public class MyController {
 	  public ModelAndView Above(@RequestParam Double SALARY) {	  
 	  ModelAndView mv = new ModelAndView();
 	  //Fetch above=new Fetch();
-	  employeeService.gtEmployees(SALARY);
+	  empDao.gtEmployees(SALARY);
 	  mv.addObject(SALARY);  
 	  mv.setViewName("catlog");
 			  
@@ -71,7 +72,7 @@ public class MyController {
 	  ModelAndView mv = new ModelAndView();
 	  //Fetch above=new Fetch(); 
 	   
-	  mv.addObject("salary", "employeeService.ltEmployees(SALARY)"); 
+	  mv.addObject("salary", "empDao.ltEmployees(SALARY)"); 
 	  mv.setViewName("catlog");
 			  
 		return mv; }

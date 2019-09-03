@@ -21,8 +21,7 @@
 							<td>
 								<button name="Abovebutton" type="button">Above</button> User =<input
 								type="text" name="Name">
-								<button name="Belowbutton" type="button" >Below</button>
-								
+								<button name="Belowbutton" type="button">Below</button>
 						</tr>
 					</table>
 
@@ -32,22 +31,22 @@
 			</td>
 		</tr>
 	</table>
-	<table style="width:50%" border="1">
-	
-  <tr>
-    <th>Firstname</th>
-    <th>Email</th> 
-    <th>salary</th>
-  </tr>
-  <%-- <%
+	<table style="width: 50%" border="1">
+
+		<tr>
+			<th>Firstname</th>
+			<th>Email</th>
+			<th>salary</th>
+		</tr>
+		<%-- <%
 
 if(session.getAttribute("Employee")==null){
 	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 	response.sendRedirect("cart.jsp");
 %> --%>
-<%-- <%} %> --%>
+		<%-- <%} %> --%>
 
-<%-- <%
+		<%-- <%
 Vector v=(Vector) request.getAttribute("Employee");
 Iterator it=v.iterator();
 while(it.hasNext()){
@@ -59,6 +58,6 @@ while(it.hasNext()){
     <td><%= Emp.getSALARY()%></td>
   </tr>
   <%} %> --%>
-</table>
+	</table>
 </body>
 </html>

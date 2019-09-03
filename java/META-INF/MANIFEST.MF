@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Class-Path: mchange-commons-java-0.2.16.jar

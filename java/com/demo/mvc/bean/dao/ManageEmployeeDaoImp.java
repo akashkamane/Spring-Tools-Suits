@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 
 import com.demo.mvc.bean.Employee;
 
-@Repository
+@Repository("MEDAO")
 public class ManageEmployeeDaoImp implements employeeDao {
 	@Autowired
 	private static SessionFactory sessionFactory;
